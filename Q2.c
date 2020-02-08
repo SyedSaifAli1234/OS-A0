@@ -23,7 +23,7 @@ int main()
 		printf("3. Remove student \n");
 		printf("4. Exit \n");
 
-		printf("Enter a number: ");
+		printf("Choose your option: ");
 		fgets(choice, 10, stdin);
 
 		number=atoi(choice);
