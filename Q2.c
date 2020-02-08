@@ -133,7 +133,7 @@ int main()
 				}
 			fclose(fp);
 			remove("Input.txt");
-        	//rename the file copy.c to original name
+        	//rename the file Input2.txt to original name
         	rename("Input2.txt", "Input.txt");
 		}
 		else if(number == 4){
