@@ -17,7 +17,7 @@ int main()
 		int for1 = 0;
 
 
-		printf("Choose what action to perform: \n");
+		printf("Choose the action to perform: \n");
 		printf("1. Add student \n");
 		printf("2. Check records \n");
 		printf("3. Remove student \n");
