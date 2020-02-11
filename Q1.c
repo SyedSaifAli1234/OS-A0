@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-	FILE *mf = fopen ("Input.txt","r");
+int main(int argc, char* arg[]){
+
+	FILE *fp1 = fopen ("Input.txt","r");
 	int n=0;
 
-	if (mf == 0)
+	if (fp1 == 0)
 	{
 		printf ("Error Opening File");
 		return 1;
@@ -26,5 +26,6 @@ int main()
 
 	}
 	printf("The total number of digits are: %d \n", n );
-	fclose(mf);
+	fclose(fp1);
+
 }
