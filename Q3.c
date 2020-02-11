@@ -1,11 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(){
+int main(int argc, char* arg[]){
 
-	
-	FILE *fp1 = fopen ("q3_a.txt","r");
+	printf("Arguement is %s \n", arg[1]);
+
+	if(*arg[1] == 'a'){
+		FILE *fp1 = fopen ("q3_a.txt","r");
+	}
+	if(*arg[1] == 'b'){
+		FILE *fp1 = fopen ("q3_b.txt","r");
+	}
 	FILE *fp2 = fopen ("new","a+");
+	
 
 	char buff[10];
 	char new [10];
@@ -16,16 +23,14 @@ int main(){
 	int i;
 
 	while(fscanf(fp1, "%s", buff) !=EOF){
-		for(i=0; buff[i]!='\0'; i++)
-		{
-			//printf("Strcmp: %d ", strcmp(&buff[i],"i"));
-			//printf("The character is =%c \n",buff[i]);
-			// if ( strcmp(&buff[i],"a") == 0 || strcmp(&buff[i],"e") == 0 || strcmp(&buff[i],"i") == 0 || strcmp(&buff[i],"o") == 0 || strcmp(&buff[i],"u") == 0 || 
-			// 	 strcmp(&buff[i],"A") == 0 || strcmp(&buff[i],"E") == 0 || strcmp(&buff[i],"I") == 0 || strcmp(&buff[i],"O") == 0 || strcmp(&buff[i],"U") == 0){
-		if ( buff[i] == 'a' || buff[i] == 'e' || buff[i] == 'i' || buff[i] == 'o' || buff[i] == 'u')
-		{
-				flag = 1;
+		for(i=0; buff[i]!='\0'; i++){
+
+		if ( buff[i] == 'a' || buff[i] == 'e' || buff[i] == 'i' || buff[i] == 'o' || buff[i] == 'u' ||
+			 buff[i] == 'A' || buff[i] == 'E' || buff[i] == 'I' || buff[i] == 'O' || buff[i] == 'U'){
+
+			flag = 1;
 			printf("The flag = %d for %c \n", flag, buff[i]);
+			
 			}
 		}
 
