@@ -1,15 +1,20 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char* arg[]){
 
-	printf("Arguement is %s \n", arg[1]);
+	FILE *fp1;
 
 	if(*arg[1] == 'a'){
-		FILE *fp1 = fopen ("q3_a.txt","r");
+		fp1 = fopen ("q3_a.txt","r");
 	}
-	if(*arg[1] == 'b'){
-		FILE *fp1 = fopen ("q3_b.txt","r");
+	else if(*arg[1] == 'b'){
+		fp1 = fopen ("q3_b.txt","r");
+	}
+	else{
+		printf("Invalid arguement \n");
+		exit(0);
 	}
 	FILE *fp2 = fopen ("new","a+");
 	
@@ -29,8 +34,6 @@ int main(int argc, char* arg[]){
 			 buff[i] == 'A' || buff[i] == 'E' || buff[i] == 'I' || buff[i] == 'O' || buff[i] == 'U'){
 
 			flag = 1;
-			printf("The flag = %d for %c \n", flag, buff[i]);
-			
 			}
 		}
 
@@ -41,11 +44,12 @@ int main(int argc, char* arg[]){
 				i--;
 			}
 			i = 0;
-			fputs(new, fp2);			
+			fputs(new, fp2);
+			fputs(" ", fp2);		
 		}
 		else if(flag == 1){
 			fputs(buff, fp2);			
-			
+			fputs(" ", fp2);	
 		}
 		memset(new,'\0',sizeof(new));
 		memset(buff,'\0',sizeof(buff));
