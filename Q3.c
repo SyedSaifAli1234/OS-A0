@@ -4,18 +4,18 @@
 
 int main(int argc, char* arg[]){
 
-	FILE *fp1;
+	FILE *fp1 = fopen(arg[1],"r");;
 
-	if(*arg[1] == 'a'){
-		fp1 = fopen ("q3_a.txt","r");
-	}
-	else if(*arg[1] == 'b'){
-		fp1 = fopen ("q3_b.txt","r");
-	}
-	else{
-		printf("Invalid arguement \n");
-		exit(0);
-	}
+	// if(*arg[1] == 'a'){
+	// 	fp1 = fopen ("q3_a.txt","r");
+	// }
+	// else if(*arg[1] == 'b'){
+	// 	fp1 = fopen ("q3_b.txt","r");
+	// }
+	// else{
+	// 	printf("Invalid arguement \n");
+	// 	exit(0);
+	// }
 	FILE *fp2 = fopen ("new","a+");
 	
 
