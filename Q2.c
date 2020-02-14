@@ -7,7 +7,7 @@ int main(){
 	int d =0;
 	while(d != 1){
 
-		char choice[10], index[10];§
+		char choice[10], index[10];
 		char temp;
 		int check = 0;
 		int number = 0; 
